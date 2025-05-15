@@ -1,0 +1,24 @@
+{
+  "name": "complete-backend",
+  "version": "1.0.0",
+  "description": "A production-ready Subscription Management System with real users, real money, and real business logic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoizAnsari-Dev/Complete-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MoizAnsari-Dev/Complete-Backend/issues"
+  },
+  "homepage": "https://github.com/MoizAnsari-Dev/Complete-Backend#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
