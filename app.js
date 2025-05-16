@@ -1,12 +1,14 @@
 import express from 'express'
+import dotenv from 'dotenv'
+
 
 const app = express()
-
+dotenv.config()
+const PORT = process.env.PORT || 3000
 app.get("/", (req, res) => {
     res.send('Comming from Root')
 });
 
-
-app.listen(3000, () => {
-    console.log('serveris Live');
+app.listen(PORT, () => {
+    console.log('serveris Live ' + PORT);
 })
