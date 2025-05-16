@@ -40,4 +40,6 @@ userRouter.delete("/:id", (req, res) => {
     message: `User with ID ${userId} deleted successfully`,
   });
 });
+
+
 export default userRouter;
