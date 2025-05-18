@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import authRouter from './routes/authRoute.js'
 import userRouter from './routes/userRoute.js'
 import subscriptionRouter from './routes/subscriptionRoute.js'
+import connectDB from './database/mongoDB.js'
 
 const app = express()
 dotenv.config()
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
     res.send('Comming from Root')
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
+    await connectDB()
     console.log('serveris Live ' + PORT);
 })
