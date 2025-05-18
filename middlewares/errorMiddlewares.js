@@ -23,7 +23,7 @@ const erorrMiddleware = (err, req, res, next) => {
             error.statusCode = 400;
         }
 
-        res.statusCode = (error.statusCode || 500).json({
+        res.status(error.statusCode || 500).json({
             success: false,
             message: error.message || 'Internal Server Error',
         });
