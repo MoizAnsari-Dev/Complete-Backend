@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import User from "../database/models/userModel.js";
+import User from "../models/userModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
@@ -74,5 +74,14 @@ export const login = async (req, res, next) => {
     }
 }
 export const logout = async (req, res, next) => {
-
+    try {
+        // Clear the token from the cookie
+        res.clearCookie("token");
+        res.status(200).json({
+            status: "success",
+            message: "User logged out successfully",
+        });
+    } catch (error) {
+        return next(error)
+    }   
 }
