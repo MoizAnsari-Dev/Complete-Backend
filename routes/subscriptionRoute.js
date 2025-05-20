@@ -1,4 +1,5 @@
 import { Router } from "express";
+import authorize from "../middlewares/authMiddleware.js";
 
 const subscriptionRouter = Router();
 
@@ -13,7 +14,7 @@ subscriptionRouter.get("/:id", (req, res) => {
     message: `Subscription with ID ${subscriptionId} is working`,
   });
 });
-subscriptionRouter.post("/", (req, res) => {
+subscriptionRouter.post("/", authorize, (req, res) => {
   const newSubscription = req.body;
   // Here you would typically save the new subscription to the database
   res.status(201).json({
