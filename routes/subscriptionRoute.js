@@ -1,5 +1,6 @@
 import { Router } from "express";
 import authorize from "../middlewares/authMiddleware.js";
+import { createSubscription, getUserSubscriptions } from "../controller/subscriptionController.js";
 
 const subscriptionRouter = Router();
 
@@ -8,20 +9,8 @@ subscriptionRouter.get("/", (req, res) => {
     message: "Subscription route is working",
   });
 });
-subscriptionRouter.get("/:id", (req, res) => {
-  const subscriptionId = req.params.id;
-  res.status(200).json({
-    message: `Subscription with ID ${subscriptionId} is working`,
-  });
-});
-subscriptionRouter.post("/", authorize, (req, res) => {
-  const newSubscription = req.body;
-  // Here you would typically save the new subscription to the database
-  res.status(201).json({
-    message: "Subscription created successfully",
-    subscription: newSubscription,
-  });
-});
+subscriptionRouter.get("/:id", authorize, getUserSubscriptions);
+subscriptionRouter.post("/", authorize, createSubscription);
 subscriptionRouter.put("/:id", (req, res) => {
   const subscriptionId = req.params.id;
   const updatedSubscription = req.body;
