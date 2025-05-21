@@ -16,3 +16,14 @@ Whether you're building a SaaS platform, membership site, or any subscription-ba
 📊 Usage Tracking & Analytics
 🛡️ Secure API Endpoints
 🧪 Modular Architecture for Easy Expansion
+
+🛠️ Tech Stack
+Node.js – Backend runtime
+Express.js – RESTful API framework
+MongoDB – NoSQL database for flexible data modeling
+Mongoose – ODM for MongoDB
+JWT – Token-based authentication
+Stripe API – Payment & subscription handling
+Nodemailer / Twilio – Notifications
+dotenv – Environment configuration
+Winston / Morgan – Logging & request tracking
