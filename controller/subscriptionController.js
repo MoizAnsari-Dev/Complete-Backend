@@ -33,6 +33,9 @@ export const getUserSubscriptions = async (req, res, next) => {
         // Fetch subscriptions for the user
         // Assuming req.params.id is the ID of the user whose subscriptions you want to fetch
         const subscriptions = await Subscription.find({ user: req.params.id })
+        // Check if subscriptions exist
+        console.log(subscriptions);
+        
         res.status(200).json({
             status: "success",
             data: {

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/MoizAnsari-Dev/Complete-Backend#readme",
   "dependencies": {
+    "@upstash/workflow": "^0.2.13",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.5.0",
