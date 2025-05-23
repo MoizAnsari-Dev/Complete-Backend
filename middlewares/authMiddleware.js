@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 const authorize = async (req, res, next) => {
   try {
     // Check if the token is present in the cookies
-    const token = req.headers["token"] || req.cookies.token;
+    const {token} = req.cookies;
     console.log("Cookies:", token);
     // If the token is not present, return an unauthorized error
     if (!token) {

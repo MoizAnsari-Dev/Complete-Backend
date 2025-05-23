@@ -61,6 +61,9 @@ export const login = async (req, res, next) => {
             expiresIn: '7d',
         });
         // Set the token in the response cookie
+        // Set the token in the cookie
+        res.cookie("token", token)
+        // Set the token in the response cookie
         res.status(200).json({
             status: "success",
             message: "User logged in successfully",

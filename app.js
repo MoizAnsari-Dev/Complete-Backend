@@ -19,8 +19,6 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/users', limiter, userRouter)
 app.use('/api/v1/subscriptions', limiter, subscriptionRouter)
 
-
-
 app.listen(PORT, async () => {
     await connectDB()
     console.log('serveris Live ' + PORT);
