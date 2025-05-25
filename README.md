@@ -4,7 +4,7 @@ A production-ready Subscription Management System built with scalability, securi
 📌 Overview
 This backend system is built to manage subscriptions for digital products or services. It supports user accounts, payment processing, subscription tiers, recurring billing, and notifications.
 
-Whether you're building a SaaS platform, membership site, or any subscription-based service, this backend provides a solid foundation upon which to build.
+Whether you're building a SaaS platform, membership site, or any subscription-based service, this backend provides a solid foundation to build.
 
 🚀 Features
 🔐 User Authentication & Authorization
