@@ -47,9 +47,9 @@ export const login = async (req, res, next) => {
     try {
         const { email, password } = req.body;
         // Check if user exists
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ email: email });
         if (!user) {
-            return res.status(401).json({ message: "Invalid credentials" });
+            return res.status(401).json({ message: "Invalid not found credentials MongoDB" });
         }
         // Check if password is correct
         const isPasswordValid = await bcrypt.compare(password, user.password);

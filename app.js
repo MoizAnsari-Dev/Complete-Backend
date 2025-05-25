@@ -10,8 +10,12 @@ import { limiter, PORT } from './config/config.js'
 import cors from 'cors'
 
 const app = express()// Create an Express application
+
+app.use(cors({
+    origin: 'http://localhost:5173', // Replace with your frontend URL
+    credentials: true
+}))// Allow CORS for all origins 
 dotenv.config()// Load environment variables from .env file
-app.use(cors())// Allow CORS for all origins 
 app.use(express.json())// Parse JSON bodies
 app.use(express.urlencoded({ extended: false }))// Parse URL-encoded bodies
 app.use(cookieParser())// Parse cookies
